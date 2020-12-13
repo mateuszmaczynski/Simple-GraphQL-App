@@ -1,6 +1,6 @@
 # Simple-GraphQL-App
 
-Getting started
+## Getting started
 As usual, run:
-npm i
-npm start
+1. `npm i`
+1. `npm start`
