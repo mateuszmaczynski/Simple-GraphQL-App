@@ -1,11 +1,21 @@
-const { ApolloServer } = require("apollo-server");
+const { ApolloServer, gql } = require("apollo-server");
 
-const typeDefs = `
+const typeDefs = gql`
   type Query {
     greeting: String
+    interestingUrls: [String]
+    firstName: String
+    email: String
+    pets: [String]
   }
 `;
-
-const server = new ApolloServer({ typeDefs });
+const data = {
+  greeting: "Hello world",
+  interestingUrls: ["https://www.udemy.com", "https://pluralsight.com"],
+  firstName: "John",
+  email: "john@example.com",
+  pets: ["Mittens", "Doggo", "Birb"]
+}
+const server = new ApolloServer({ typeDefs, rootValue: data });
 
 server.listen({ port: 4000}).then((result) => console.log(result.url));
