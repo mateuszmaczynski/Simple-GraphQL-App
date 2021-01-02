@@ -1,4 +1,4 @@
-# Simple-GraphQL-App
+# Simple-GraphQL-App - first steps in graphQL 
 
 ## Getting started
 As usual, run:
